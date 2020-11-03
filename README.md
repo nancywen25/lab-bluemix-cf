@@ -87,7 +87,7 @@ Once the application is deployed and started open a web browser and point to the
 
 **manifest.yml** - Controls how the app will be deployed in Bluemix and specifies memory and other services like Redis that are needed to be bound to it.
 
-**service** - the python package that contains fthe applciation. This is implemented as a simple Flask-RESTful application. The routes are defined in the application using the `api.add_resource()` calls. This application has a `/` route and a `/pets` route defined. The application deployed to IBM Cloud needs to listen to the port defined by the VCAP_APP_PORT environment variable as seen here:
+**service** - the python package that contains the applciation. This is implemented as a simple Flask-RESTful application. The routes are defined in the application using the `api.add_resource()` calls. This application has a `/` route and a `/pets` route defined. The application deployed to IBM Cloud needs to listen to the port defined by the VCAP_APP_PORT environment variable as seen here:
 ```python
 port = os.getenv('VCAP_APP_PORT', '5000')
 if __name__ == "__main__":
